@@ -1,0 +1,312 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+:root{
+    --bg_body: #F4F6F8;
+    --bg_header: #2C2F36;
+    --shadow: rgba(10, 10, 10, 0.823);
+    --link_header: #E5E7EB;
+    --hover_link_header: #38BDF8;
+    --bg_aside: #1F2933;
+    --link_aside: #CBD5E1;
+    --hover_bg_link_aside: #374151;
+    --hover_link_aside: #FFFFFF;
+    --bg_btn_primary: #2563EB;
+    --text_btn: #FFFFFF;
+    --hover_bg_btn_primary: #1D4ED8;
+    --bg_btn_secondary: #6b7280c6;
+    --hover_bg_btn_secondary: #6b7280;
+}
+
+body{
+    background-color: var(--bg_body);
+    margin-top: 80px;
+}
+
+.welcome{
+    color: #5a080fcb;
+    font-size: 50px;
+}
+
+header{
+    background-color: var(--bg_header);
+    box-shadow: 0 2px 8px var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+
+header .head{
+    padding: 15px 0;
+}
+
+header .head a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--link_header);
+    font-size: 20px;
+    transition: all .3s;
+}
+
+header .head a:hover{
+    color: var(--hover_link_header);
+}
+
+header .auth{
+    display: flex;
+    margin-right: 10px;
+}
+
+header .auth a{
+    color: var(--hover_link_header);
+    margin-right: 10px;
+    font-size: 18px;
+    transition: all .3s;
+}
+
+header .auth a:hover{
+    color: #1bb6f9c9;
+}
+
+header .auth button{
+    background-color: var(--bg_header);
+    border: none;
+    font-size: 18px;
+    transition: all .3s;
+    color: rgb(187, 16, 16);
+}
+
+header .auth button:hover{
+    color: rgb(121, 13, 13);
+}
+
+aside{
+    position: fixed;
+    background-color: var(--bg_aside) !important;
+    height: 100vh;
+    width: 220px;
+    z-index: 99;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+aside .content-aside{
+    padding-top: 80px;
+}
+
+aside .icon{
+    text-align: center;
+    margin-left: 40%;
+    color: var(--link_aside);
+    margin-top: 20px;
+    font-size: 25px !important;
+}
+
+aside .nav-item{
+    color: var(--link_aside);
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 10px 8px;
+    border-radius: 3PX;
+}
+
+aside .nav-item:hover{
+    color: var(--hover_link_aside);
+    background-color: var(--hover_bg_link_aside);
+}
+
+.sidebar-nav{
+    margin-left: -25px;
+}
+
+.formToSearch{
+    display: flex;
+    justify-content: center;
+}
+
+.search{
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.formToSearch button{
+    width: 33px;
+    height: 33px;
+    background-color: #444444;
+    border: #444444;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.formToSearch button:hover{
+    background-color: gray;
+    transition: all .3s;
+}
+
+.admins h3{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-left: 180px;
+}
+
+.admins .big-card{
+    margin-left: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.admins .big-card .card{
+    /* padding: 10px; */
+}
+
+
+.students, .parents{
+    margin-right: 300px;
+}
+
+.students h3 a,
+.parents h3 a{
+    text-decoration: none;
+    background-color: var(--bg_btn_primary);
+    color: var(--text_btn);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.students h3 a:hover,
+.parents h3 a:hover{
+    background-color: var(--hover_bg_btn_primary);
+}
+
+.students table td form button,
+.parents table td form button{
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.card{
+    border: 2px solid var(--bg_header);
+    background-color: #2c2f3656;
+}
+
+.card-title a{
+    text-decoration: none;
+    font-size: 19px;
+    color: var(--text_btn);
+    background-color: var(--bg_btn_secondary);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.card-title a:hover{
+    background-color: var(--hover_bg_btn_secondary);
+}
+
+.card .card-body .form-group{
+    margin-bottom: 15px;
+}
+
+.card .card-body .form-group label{
+    font-size: 18px;
+}
+
+.create_student .card .card-body button,
+.create_parent .card .card-body button{
+    background-color: var(--bg_btn_primary);
+    color: var(--text_btn);
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+}
+
+.create_student .card .card-body button:hover,
+.create_parent .card .card-body button:hover{
+    background-color: var(--hover_bg_btn_primary);
+}
+
+.paid{
+    font-size: 18px;
+}
+
+.show .card-body h6{
+    color: #1F2933;
+    font-size: 18px;
+}
+
+.qr-code{
+    text-align: center;
+}
+
+.login p, .register p{
+    color: var(--bg_aside);
+}
+
+.login p a,
+.register p a{
+    text-decoration: none;
+}
+
+/* scanner page */
+
+.body_scanner{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}t
+
+.scanner-card{
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1 );
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.scanner-card h2{
+    color: #2563EB;
+    margin-bottom: 20px;
+}
+
+#reader{
+    width: 100%;
+    border-radius: 10px;
+}
