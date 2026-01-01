@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class AttendanceController extends Controller
 {
     public function scanner(){
-        return view('attendance.scanner');
+        return view('attendances.scanner');
     }
 
     public function scan(Request $request){
@@ -44,5 +44,19 @@ class AttendanceController extends Controller
             'success' => true,
             'message' => 'Student ' . $student->name . ' is successfully registered'
         ]);
+    }
+
+    public function index(Request $request){
+        $search = $request->input('search');
+        if($search){
+            $attendaces = Attendance::with('student')
+            ->whereHas('student', function($query) use($search){
+                $query->where('name', 'like', "%$search%");
+            })
+            ->latest()->get();
+        }else{
+            $attendaces = Attendance::with('student')->latest()->get();
+        }
+        return view('attendances.index',compact('attendaces'));
     }
 }

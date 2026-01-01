@@ -16,6 +16,7 @@ Route::middleware('auth')->group(function(){
     Route::get('admins', [AdminController::class, 'index'])->name('admin');
     Route::resource('students', StudentController::class);
     Route::resource('parents', ParentsController::class);
+    Route::get('/attendances', [AttendanceController::class, 'index'])->name('attendances');
 
     Route::get('/scanner', [AttendanceController::class, 'scanner'])->name('scanner');
     Route::post('/scan-attendance', [AttendanceController::class, 'scan'])->name('scan');

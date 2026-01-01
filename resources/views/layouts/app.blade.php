@@ -48,6 +48,13 @@
                 </li>
 
                 <li class="nav-item">
+                    <a href="{{route('parents.index')}}" class="nav-link">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span>Parents</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a href="{{route('students.index')}}" class="nav-link">
                         <i class="fa-solid fa-user-graduate"></i>
                         <span>Students</span>
@@ -55,9 +62,9 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{route('parents.index')}}" class="nav-link">
-                        <i class="fa-solid fa-user-group"></i>
-                        <span>Parents</span>
+                    <a href="{{route('attendances')}}" class="nav-link">
+                        <i class="fa-solid fa-clipboard-user"></i>
+                        <span>Attendances</span>
                     </a>
                 </li>
             </ul>
